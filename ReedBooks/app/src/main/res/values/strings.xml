@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ReedBooks</string>
+    <string name="titol_text">TITOL :</string>
+    <string name="titol_edit">nom del llibre</string>
+    <string name="autor_text">AUTOR :</string>
+    <string name="autor_edit">nom del autor</string>
+    <string name="estat_text">ESTAT :</string>
+    <string name="nota_edit">nota del llibre</string>
+    <string name="note_text">NOTE :</string>
+    <string name="add_text">ADD</string>
+</resources>

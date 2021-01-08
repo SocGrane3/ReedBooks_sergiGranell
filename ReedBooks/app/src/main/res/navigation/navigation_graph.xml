@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/reedbooksListFragment">
+    <argument
+        android:name="bookregister" />
+    <fragment
+        android:id="@+id/reedbooksFragment"
+        android:name="cat.itb.reedbooks.ReedbooksFragment"
+        android:label="ReedbooksFragment" >
+        <argument android:name="booksModel"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_reedbooksFragment_to_reedbooksListFragment2"
+            app:destination="@id/reedbooksListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reedbooksListFragment"
+        android:name="cat.itb.reedbooks.ReedbooksListFragment"
+        android:label="ReedbooksListFragment" >
+        <action
+            android:id="@+id/action_reedbooksListFragment_to_reedbooksFragment"
+            app:destination="@id/reedbooksFragment" />
+    </fragment>
+</navigation>

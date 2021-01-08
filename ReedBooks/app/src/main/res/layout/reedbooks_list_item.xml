@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/fons_item">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="TITLE  :"
+        android:textColor="@color/color_lletra"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/atribut_titel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/lletre_atribut"
+        app:layout_constraintBottom_toTopOf="@+id/athor_text"
+        app:layout_constraintStart_toEndOf="@+id/title_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="juego de tronos" />
+
+    <TextView
+        android:id="@+id/athor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="ATHOR  :"
+        android:textColor="@color/color_lletra"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <TextView
+        android:id="@+id/atribut_athor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/lletre_atribut"
+        app:layout_constraintBottom_toBottomOf="@+id/athor_text"
+        app:layout_constraintStart_toEndOf="@+id/athor_text"
+        app:layout_constraintTop_toBottomOf="@+id/title_text"
+        tools:text="juego de tronos" />
+
+    <TextView
+        android:id="@+id/state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="STATE  :"
+        android:textColor="@color/color_lletra"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/athor_text" />
+
+    <TextView
+        android:id="@+id/atribut_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/lletre_atribut"
+        app:layout_constraintBottom_toTopOf="@+id/note_text"
+        app:layout_constraintStart_toEndOf="@+id/state_text"
+        app:layout_constraintTop_toBottomOf="@+id/athor_text"
+        tools:text="juego de tronos" />
+
+    <TextView
+        android:id="@+id/note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="NOTA  :"
+        android:textColor="@color/color_lletra"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state_text" />
+
+    <TextView
+        android:id="@+id/atribut_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="juego de tronos"
+        android:textColor="@color/lletre_atribut"
+        app:layout_constraintBottom_toBottomOf="@+id/note_text"
+        app:layout_constraintStart_toEndOf="@+id/note_text"
+        app:layout_constraintTop_toBottomOf="@+id/state_text"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="juego de tronos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
