@@ -69,7 +69,7 @@ public class ReedbooksFragment extends Fragment {
             booksPosition = getArguments().getInt("booksModel");
             if(booksPosition > -1){
                 addButton.setText("UP");
-                bookModel = MainActivity.booksViewModel.booksregister.get(booksPosition);
+                bookModel = BooksViewModel.booksregister.get(booksPosition);
                 titol.setText(bookModel.getTitol());
                 autor.setText(bookModel.getAutor());
                 estat.setSelection(bookModel.getEstat());
@@ -105,15 +105,15 @@ public class ReedbooksFragment extends Fragment {
 
     public void addBoks(View v){
         if(booksPosition < 0){
-            MainActivity.booksViewModel.booksregister.add(bookModel);
+            BooksViewModel.booksregister.add(bookModel);
             NavDirections directions = cat.itb.reedbooks.ReedbooksFragmentDirections.actionReedbooksFragmentToReedbooksListFragment2();
             Navigation.findNavController(v).navigate(directions);
         }else {
-            MainActivity.booksViewModel.booksregister.get(booksPosition).setTitol(bookModel.getTitol());
-            MainActivity.booksViewModel.booksregister.get(booksPosition).setAutor(bookModel.getAutor());
-            MainActivity.booksViewModel.booksregister.get(booksPosition).setEstat(bookModel.getEstat());
-            MainActivity.booksViewModel.booksregister.get(booksPosition).setEstatText(bookModel.getEstatText());
-            MainActivity.booksViewModel.booksregister.get(booksPosition).setNota(bookModel.getNota());
+            BooksViewModel.booksregister.get(booksPosition).setTitol(bookModel.getTitol());
+            BooksViewModel.booksregister.get(booksPosition).setAutor(bookModel.getAutor());
+            BooksViewModel.booksregister.get(booksPosition).setEstat(bookModel.getEstat());
+            BooksViewModel.booksregister.get(booksPosition).setEstatText(bookModel.getEstatText());
+            BooksViewModel.booksregister.get(booksPosition).setNota(bookModel.getNota());
             NavDirections directions = cat.itb.reedbooks.ReedbooksFragmentDirections.actionReedbooksFragmentToReedbooksListFragment2();
             Navigation.findNavController(v).navigate(directions);
         }

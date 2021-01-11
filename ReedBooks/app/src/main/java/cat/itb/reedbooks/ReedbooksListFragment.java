@@ -20,10 +20,13 @@ public class ReedbooksListFragment extends Fragment {
     RecyclerView recyclerView;
     Button addButton;
     BooksAdapter adapter;
+    BooksViewModel booksViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        booksViewModel = new ViewModelProvider(this).get(BooksViewModel.class);
     }
 
     @Nullable
@@ -34,7 +37,7 @@ public class ReedbooksListFragment extends Fragment {
         addButton = v.findViewById(R.id.button_add_list);
         recyclerView = v.findViewById(R.id.recyclerView);
 
-        adapter = new BooksAdapter(MainActivity.booksViewModel.booksregister);
+        adapter = new BooksAdapter(BooksViewModel.booksregister);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
