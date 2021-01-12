@@ -26,7 +26,7 @@ public class ReedbooksListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        booksViewModel = new ViewModelProvider(this).get(BooksViewModel.class);
+        if(booksViewModel == null)booksViewModel = new ViewModelProvider(this).get(BooksViewModel.class);
     }
 
     @Nullable
